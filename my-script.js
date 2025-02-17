@@ -11,22 +11,15 @@ function getComputerChoice() {
 
 function getHumanChoice() {
     
-    let choiceCheck = true;
-    let choice;
+    let choice = prompt("Choose your pick (Rock, Paper, Scissors)").toLowerCase();
 
-    while (choiceCheck) {
-    
-        choice = prompt("Choose your pick (Rock, Paper, Scissors)").toLowerCase();
-
-        if (choice === 'rock' || choice === 'paper' || choice === 'scissors') {
-            choiceCheck = false;
-            return choice;
-        } else {
-            alert('Please choose valid choices try again.')
-            choiceCheck = true;
-        }
-    } 
-}
+    if (choice === 'rock' || choice === 'paper' || choice === 'scissors') {
+        return choice;
+    } else {
+        alert('Please choose valid choices try again.')
+        return getHumanChoice();
+    }
+} 
 
 function playRound(humanChoice, computerChoice) {
 
