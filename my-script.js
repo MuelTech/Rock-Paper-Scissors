@@ -9,16 +9,10 @@ function getComputerChoice() {
     }
 }
 
-function getHumanChoice() {
-    
-    let choice = prompt("Choose your pick (Rock, Paper, Scissors)").toLowerCase();
-
+function getHumanChoice(choice) {
     if (choice === 'rock' || choice === 'paper' || choice === 'scissors') {
         return choice;
-    } else {
-        alert('Please choose valid choices try again.')
-        return getHumanChoice();
-    }
+    } 
 } 
 
 function playRound(humanChoice, computerChoice) {
@@ -55,6 +49,16 @@ function playRound(humanChoice, computerChoice) {
 //         console.log(`GAME OVER! You lost by a Computer!`);
 //     }
 // }
+
+    const buttons = document.getElementById("parent");
+
+    buttons.addEventListener("click", (choices) => {
+        if (choices.target.matches(".btn")) {
+            const humanSelection = getHumanChoice(choices.target.textContent);
+            const computerSelection = getComputerChoice();
+            playRound(humanSelection, computerSelection);
+        }
+    });
 
 let humanScore = 0;
 let computerScore = 0;
