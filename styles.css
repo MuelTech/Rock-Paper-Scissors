@@ -1,0 +1,176 @@
+@font-face {
+    font-family: PressStart2P-Regular;
+    src: url(../Press_Start_2P/PressStart2P-Regular.ttf);
+}
+
+:root {
+    --color-1: #222831;
+    --color-2: #393e46;
+    --color-3: #eeeeee;
+    --br-value: 7px;
+}
+
+* {
+    font-family: PressStart2P-Regular, Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+h1, .created-lemuel {
+    background-color: var(--color-2);
+    color: var(--color-3);
+    text-align: center;
+    padding: 20px;
+}
+
+.body-container {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--color-1);
+}
+
+.weapon-container {
+    border: 2px solid var(--color-3);
+    border-radius: var(--br-value);
+    text-align: center;
+}
+
+.weapons-button {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+#weapon-btn {
+    font-size: 3em;
+    border: 2px solid transparent;
+    background-color: transparent;
+    width: 2em;
+}
+
+#weapon-btn:hover {
+    cursor: pointer;
+    border: 2px solid var(--color-3);
+    border-radius: var(--br-value);
+}
+
+h3 {
+    background-color: var(--color-3);
+    padding: 20px;
+}
+
+.game-message {
+    background-color: transparent;
+    color: var(--color-3);
+    text-align: center;
+    line-height: 1.5;
+}
+
+.round-choices {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center;
+    width: 50%;
+}
+
+.vs {
+    color: var(--color-3);
+    font-size: 48px;
+    padding: 50px;
+}
+
+.human, .vs, .computer {
+    height: 150px;
+    border-radius: var(--br-value);
+}
+
+.human, .computer {
+    border: 2px solid var(--color-3);
+}
+
+h4 {
+    padding: 20px 20px 20px 20px;
+    background-color: var(--color-3);
+}
+
+.human-choice, .computer-choice {
+    padding-top: 30px;
+    font-size: 40px;
+    color: var(--color-3);
+}
+
+.round-text {
+    background-color: var(--color-3);
+    padding: 10px 15px;
+}
+
+.round-score {
+    color: var(--color-3);
+}
+
+.score-container {
+    display: flex;
+    /* justify-content: space-around; */
+}
+
+.score-text {
+    padding: 10px 15px;
+}
+
+.round-score-board {
+    text-align: center;
+    border-radius: var(--br-value);
+    border: 2px solid var(--color-3)
+}
+
+
+.human-score, .computer-score {
+    padding: 10px;
+    border-top: 2px solid var(--color-3);
+}
+
+.popup-modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    border-radius: var(--br-value);
+    border: 2px solid var(--color-3);
+    color: var(--color-3);
+    transition: 0.1s ease;
+    height: 100px;
+    width: 200px;
+}
+
+#modal-popup-center {
+    position: absolute;
+    left: 50%;
+    top: 55%;
+    transform: translate(-50%, -50%);
+}
+
+.popup-btn {
+    color: var(--color-3);
+    background-color: transparent;
+    border-radius: var(--br-value);
+    border: 2px solid var(--color-3);
+    padding: 7px;
+    font-size: 10px;
+}
+
+.popup-btn:hover {
+    background-color: var(--color-3);
+    color: var(--color-1);
+}
+
+div.hide {
+    display: none;
+}

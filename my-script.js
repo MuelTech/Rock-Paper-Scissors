@@ -1,3 +1,9 @@
+
+let humanScore = 0;
+let computerScore = 0;
+
+
+
 function getComputerChoice() {
     
     let comChoice = Math.floor(Math.random() * 3) + 1;
@@ -18,19 +24,19 @@ function getHumanChoice(choice) {
 function playRound(humanChoice, computerChoice) {
 
     if (humanChoice === computerChoice) {
-        console.log("ITS A TIE!");
-        console.log(`Human Score: ${humanScore} Computer Score: ${computerScore}`);
+        para.textContent = ("ITS A TIE!\n");
+        para.textContent += (`Human Score: ${humanScore}\nComputer Score: ${computerScore}`);
     } else if (humanChoice === 'rock' && computerChoice === 'scissors' ||
         humanChoice === 'paper' && computerChoice === 'rock' ||
         humanChoice === 'scissors' && computerChoice === 'paper')
     {
         humanScore++;
-        console.log(`You Win! ${humanChoice} beats ${computerChoice}`);
-        console.log(`Human Score: ${humanScore} Computer Score: ${computerScore}`);
+        para.textContent = (`You Win! ${humanChoice} beats ${computerChoice}\n`);
+        para.textContent += (`Human Score: ${humanScore}\nComputer Score: ${computerScore}`);
     } else {
         computerScore++;
-        console.log(`You Lose! ${computerChoice} beats ${humanChoice}`);
-        console.log(`Human Score: ${humanScore} Computer Score: ${computerScore}`);
+        para.textContent = (`You Lose! ${computerChoice} beats ${humanChoice}\n`);
+        para.textContent += (`Human Score: ${humanScore}\nComputer Score: ${computerScore}`);
     }
 }
 
@@ -50,7 +56,9 @@ function playRound(humanChoice, computerChoice) {
 //     }
 // }
 
-    const buttons = document.getElementById("parent");
+    const buttons = document.getElementById("buttons");
+    const para = document.querySelector(".announce");
+    para.style.whiteSpace = "pre";
 
     buttons.addEventListener("click", (choices) => {
         if (choices.target.matches(".btn")) {
@@ -60,6 +68,4 @@ function playRound(humanChoice, computerChoice) {
         }
     });
 
-let humanScore = 0;
-let computerScore = 0;
 // playGame();
