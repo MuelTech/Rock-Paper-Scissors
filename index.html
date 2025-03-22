@@ -14,10 +14,10 @@
     <div class="body-container">
     <div class="weapon-container">
         <h3>Pick Your Weapon</h3>
-        <div class="weapons-button">
-            <button class="rock" id="weapon-btn">👊</button>
-            <button class="paper" id="weapon-btn">🖐️</button>
-            <button class="scissors" id="weapon-btn">✌️</button>
+        <div class="weapons-button" id="rps-btn">
+            <button value="rock" id="weapon-btn" class="disabled-btn">👊</button>
+            <button value="paper" id="weapon-btn" class="disabled-btn">🖐️</button>
+            <button value="scissors" id="weapon-btn" class="disabled-btn">✌️</button>
         </div>
     </div>
     <div class="round-choices">
@@ -48,8 +48,8 @@
         </div>
         </div>
     </div>  
-    <div class="popup-modal hide" id="modal-popup-center">
-        <p class="popup-message">You Won!</p>
+    <div class="popup-modal show" id="modal-popup-center">
+        <p class="popup-message">YOU WON!</p>
         <button class="popup-btn">Play again</button>
     </div>  
     </div>
