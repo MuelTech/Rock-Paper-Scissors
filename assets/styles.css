@@ -75,7 +75,7 @@ h3 {
 .round-choices {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-evenly;
     text-align: center;
     width: 50%;
 }
@@ -103,7 +103,7 @@ h4 {
 .human-choice, .computer-choice {
     padding: 20px 15px 10px 15px;
     font-size: 50px;
-    /* color: var(--color-3); */
+    color: var(--color-3);
 }
 
 .round-text {
