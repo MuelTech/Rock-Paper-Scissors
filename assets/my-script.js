@@ -72,6 +72,7 @@ function playRound(humanChoice, computerChoice) {
 
 function showTheWinner() {
     if (humanScore === 5) {
+        modalMessage.textContent = "YOU WON!";
         showWinner.classList.remove('show')
         disableWeaponBtn.forEach(elem => elem.disabled = true);
     } else if (computerScore === 5) {
